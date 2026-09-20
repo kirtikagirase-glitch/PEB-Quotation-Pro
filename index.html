@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260722-05-f3252b3"}');</script><script src="/_sdk/e358eac22bd01364.telemetry_sdk.js" integrity="sha512-KPxp3rw4K8Nu9ceWJc3gyM7srgaZxiFWOVbyu260EYzzAqdz10mfo5xyXrCx+wEKtGo77JbtmwXvFLbwrGzwvw=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEB Quotation Pro</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
+  <script src="/_sdk/47669dc8496955be.editing_sdk.js" integrity="sha512-SXgqvNdy3CX4R90Kr2d0cSNYZOv6KbcxTq/tprZCtYPHhvtgc5Aagp95xl8W/LNBFpixAlLGqjQW133qbh1QAg=="></script>
+  <style>
+body{font-family:'DM Sans',sans-serif;margin:0}
+:root{--primary:#1e3a5f;--accent:#f97316;--light:#f8fafc}
+.step-dot.active{background:var(--accent);color:#fff}
+.step-dot.done{background:var(--primary);color:#fff}
+.view{display:none}.view.active{display:block}
+.input-field{width:100%;padding:0.6rem 0.75rem;border:1px solid #cbd5e1;border-radius:0.5rem;font-size:0.9rem;outline:none;transition:border 0.2s}
+.input-field:focus{border-color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;padding:0.65rem 1.5rem;border-radius:0.5rem;font-weight:600;border:none;cursor:pointer;transition:background 0.2s}
+.btn-primary:hover{background:#ea580c}
+.btn-secondary{background:var(--primary);color:#fff;padding:0.65rem 1.5rem;border-radius:0.5rem;font-weight:600;border:none;cursor:pointer}
+.card{background:#fff;border-radius:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:1.5rem}
+@media print{.no-print{display:none!important}}
+</style>
+  <script src="/_sdk/7831c9b82769a23f.resizing_sdk.js" type="text/javascript" integrity="sha512-8T/qhF3yB5dtqHof6yvY2492zFsme1nYV1+FuXfYvPz63uo2L30fnKiOabmH0Sl3qhplMLgxjytDR8IvycRwKQ=="></script>
+ </head>
+ <body data-template-id="__page-root" class="min-h-screen bg-slate-50"><!-- NAV -->
+  <nav class="no-print bg-white border-b border-slate-200 sticky top-0 z-50">
+   <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <h1 data-template-id="nav-title"
+    class="c anva-text text-xl font-bold"
+    style="color:var(--primary)">
+    PEB Quotation Pro
+</h1>
+    <div class="flex gap-3"><button id="nav-home" class="btn-secondary text-sm px-3 py-1.5" onclick="showView('landing')"><i data-lucide="home" style="width:16px;height:16px;display:inline;vertical-align:middle"></i></button> <button id="nav-history" class="btn-secondary text-sm px-3 py-1.5" onclick="showView('history')"><i data-lucide="clock" style="width:16px;height:16px;display:inline;vertical-align:middle"></i></button>
+    </div>
+   </div>
+  </nav><!-- LANDING -->
+  <div id="view-landing" class="view active">
+   <header class="relative overflow-hidden" style="min-height:360px"><img data-template-id="hero-image" class="canva-image absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,var(--primary) 60%,transparent)"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-white">
+     <h2 data-template-id="hero-heading" class="canva-text font-bold mb-3"></h2>
+     <p data-template-id="hero-sub" class="canva-text opacity-90 mb-6 max-w-xl"></p><button data-template-id="hero-cta" class="canva-button btn-primary text-lg px-8 py-3" onclick="startWizard()"></button>
+    </div>
+   </header>
+   <section class="max-w-5xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+    <div data-template-id="feat-1" class="canva-card card text-center">
+     <i data-lucide="calculator" style="width:36px;height:36px;color:var(--accent);margin:0 auto 0.75rem"></i>
+     <h3 data-template-id="feat-1-title" class="canva-text font-semibold mb-1"></h3>
+     <p data-template-id="feat-1-desc" class="canva-text text-sm text-slate-500"></p>
+    </div>
+    <div data-template-id="feat-2" class="canva-card card text-center">
+     <i data-lucide="file-text" style="width:36px;height:36px;color:var(--accent);margin:0 auto 0.75rem"></i>
+     <h3 data-template-id="feat-2-title" class="canva-text font-semibold mb-1"></h3>
+     <p data-template-id="feat-2-desc" class="canva-text text-sm text-slate-500"></p>
+    </div>
+    <div data-template-id="feat-3" class="canva-card card text-center">
+     <i data-lucide="trending-up" style="width:36px;height:36px;color:var(--accent);margin:0 auto 0.75rem"></i>
+     <h3 data-template-id="feat-3-title" class="canva-text font-semibold mb-1"></h3>
+     <p data-template-id="feat-3-desc" class="canva-text text-sm text-slate-500"></p>
+    </div>
+   </section>
+  </div><!-- WIZARD -->
+  <div id="view-wizard" class="view">
+   <div class="max-w-3xl mx-auto px-4 py-8"><!-- Progress -->
+    <div class="flex items-center justify-between mb-8" id="progress-bar"></div><!-- Steps -->
+    <form id="wizard-form" class="card" onsubmit="return false;">
+     <div id="step-content"></div>
+     <div class="flex justify-between mt-6"><button type="button" class="btn-secondary" id="prev-btn" onclick="prevStep()">← Back</button> <button type="button" class="btn-primary" id="next-btn" onclick="nextStep()">Next →</button>
+     </div>
+    </form>
+   </div>
+  </div><!-- HISTORY -->
+  <div id="view-history" class="view">
+   <div class="max-w-4xl mx-auto px-4 py-8">
+    <h2 data-template-id="history-title" class="canva-text text-2xl font-bold mb-6" style="color:var(--primary)"></h2>
+    <div id="history-list" class="space-y-4"></div>
+    <p id="history-empty" data-template-id="history-empty" class="canva-text text-center text-slate-400 py-12"></p>
+   </div>
+  </div><!-- RESULT -->
+  <div id="view-result" class="view">
+   <div class="max-w-4xl mx-auto px-4 py-8" id="result-content"></div>
+  </div>
+  <script>
+// State
+let currentStep=0,quotations=[],formData={};
+const steps=['Project Info','Building Details','Structural','Materials & Add-ons','Review'];
+
+function showView(v){document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));document.getElementById('view-'+v).classList.add('active')}
+function startWizard(){currentStep=0;formData={};showView('wizard');renderStep()}
+
+// Progress bar
+function renderProgress(){
+const bar=document.getElementById('progress-bar');bar.innerHTML='';
+steps.forEach((s,i)=>{
+const cls=i<currentStep?'done':i===currentStep?'active':'';
+bar.innerHTML+=`<div class="flex flex-col items-center flex-1"><div class="step-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-slate-300 ${cls}" style="background:${cls==='active'?'var(--accent)':cls==='done'?'var(--primary)':'#fff'};color:${cls?'#fff':'#64748b'}">${i+1}</div><span class="text-xs mt-1 text-slate-500 hidden sm:block">${s}</span></div>`;
+});
+}
+
+function renderStep(){
+renderProgress();
+const c=document.getElementById('step-content');
+document.getElementById('prev-btn').style.display=currentStep===0?'none':'';
+document.getElementById('next-btn').textContent=currentStep===steps.length-1?'Generate Quotation ✓':'Next →';
+if(currentStep===0)c.innerHTML=stepProjectInfo();
+else if(currentStep===1)c.innerHTML=stepBuilding();
+else if(currentStep===2)c.innerHTML=stepStructural();
+else if(currentStep===3)c.innerHTML=stepMaterials();
+else c.innerHTML=stepReview();
+}
+
+function field(label,name,type='text',req=true,ph=''){return `<label class="block mb-3"><span class="text-sm font-medium text-slate-700">${label}${req?'*':''}</span><input class="input-field mt-1" name="${name}" type="${type}" placeholder="${ph}" ${req?'required':''} value="${formData[name]||''}"></label>`}
+function sel(label,name,opts){return `<label class="block mb-3"><span class="text-sm font-medium text-slate-700">${label}</span><select class="input-field mt-1" name="${name}">${opts.map(o=>`<option ${formData[name]===o?'selected':''}>${o}</option>`).join('')}</select></label>`}
+
+function stepProjectInfo(){return `<h3 class="text-lg font-bold mb-4" style="color:var(--primary)">Project Information</h3><div class="grid md:grid-cols-2 gap-x-4">${field('Customer Name','customer_name')}${field('Company Name','company_name','text',false)}${field('Mobile Number','mobile','tel')}${field('Email','email','email')}${field('Project Location','project_location')}${field('GST Number','gst_number','text',false,'Optional')}</div>`}
+
+function stepBuilding(){return `<h3 class="text-lg font-bold mb-4" style="color:var(--primary)">Building Details</h3><div class="grid md:grid-cols-2 gap-x-4">${field('Length (m)','building_length','number')}${field('Width (m)','building_width','number')}${field('Height (m)','building_height','number')}${field('Number of Floors','num_floors','number')}${sel('Roof Type','roof_type',['Double Slope','Single Slope','Curved Roof'])}${field('Bay Spacing (m)','bay_spacing','number',false,'6')}${field('Number of Bays','num_bays','number',false,'4')}</div>`}
+
+function stepStructural(){return `<h3 class="text-lg font-bold mb-4" style="color:var(--primary)">Structural Requirements</h3><div class="grid md:grid-cols-2 gap-x-4">${sel('Steel Grade','steel_grade',['Fe 345','Fe 250','Fe 410'])}${field('Wind Speed (m/s)','wind_speed','number',false,'39')}${sel('Seismic Zone','seismic_zone',['Zone II','Zone III','Zone IV','Zone V'])}${sel('Crane Required','crane_required',['No','Yes'])}${field('Crane Capacity (T)','crane_capacity','number',false)}${sel('Mezzanine Floor','mezzanine','No Yes'.split(' '))}${sel('Insulation','insulation','Yes No'.split(' '))}${sel('Wall Cladding','wall_cladding',['Color Coated Sheet','Sandwich Panel','Brick Wall'])}${sel('Roof Cladding','roof_cladding',['Color Coated Sheet','Sandwich Panel','Polycarbonate'])}</div>`}
+
+function stepMaterials(){return `<h3 class="text-lg font-bold mb-4" style="color:var(--primary)">Materials & Optional Add-ons</h3><div class="grid md:grid-cols-2 gap-x-4">${sel('Steel Brand','steel_brand',['Tata Tiscon','JSW','SAIL','Jindal'])}${sel('Sheet Thickness','sheet_thickness',['0.50 mm','0.47 mm','0.45 mm'])}${sel('Paint Type','paint_type',['Epoxy Primer','PU Paint','Powder Coating'])}${sel('Foundation Type','foundation','Isolated Footing Combined Footing Raft'.split(' ').map((w,i,a)=>i%2===0&&a[i+1]?w+' '+a[i+1]:null).filter(Boolean.bind(null)).length?['Isolated Footing','Combined Footing','Raft Foundation']:['Isolated Footing','Combined Footing','Raft Foundation'])}</div><h4 class="font-semibold mt-4 mb-2 text-slate-700">Optional Add-ons</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">${['Rolling Shutter','Sliding Door','Personnel Door','Windows','Turbo Ventilator','Solar Panels','False Ceiling','Fire Fighting','Electrical Work','Plumbing','Rainwater Harvesting'].map(a=>`<label class="flex items-center gap-2 text-sm"><input type="checkbox" name="addon_${a.replace(/ /g,'_').toLowerCase()}" ${formData['addon_'+a.replace(/ /g,'_').toLowerCase()]?'checked':''}>${a}</label>`).join('')}</div>`}
+
+function stepReview(){
+const l=Number(formData.building_length)||30,w=Number(formData.building_width)||20,h=Number(formData.building_height)||8;
+const area=l*w,roofArea=area*1.1,wallArea=2*(l+w)*h;
+const steelWt=area*0.035;// approx 35 kg/sqm
+const matCost=steelWt*72000+roofArea*650+wallArea*550+area*180;
+const labourCost=area*320;
+const machineryCost=area*85;
+const foundationCost=area*420;
+const subtotal=matCost+labourCost+machineryCost+foundationCost;
+const gst=subtotal*0.18,contingency=subtotal*0.03,profit=subtotal*0.12;
+const grand=subtotal+gst+contingency+profit;
+formData._calc={area,roofArea,wallArea,steelWt,matCost,labourCost,machineryCost,foundationCost,gst,contingency,profit,grand,costSqm:grand/area,costSqft:grand/(area*10.764)};
+return `<h3 class="text-lg font-bold mb-4" style="color:var(--primary)">Review & Summary</h3>
+<div class="grid md:grid-cols-2 gap-4 text-sm">
+<div><strong>Customer:</strong> ${formData.customer_name||'-'}</div>
+<div><strong>Location:</strong> ${formData.project_location||'-'}</div>
+<div><strong>Dimensions:</strong> ${l}m × ${w}m × ${h}m</div>
+<div><strong>Total Area:</strong> ${area.toLocaleString()} m²</div>
+<div><strong>Roof Type:</strong> ${formData.roof_type||'Double Slope'}</div>
+<div><strong>Steel Grade:</strong> ${formData.steel_grade||'Fe 345'}</div>
+</div>
+<hr class="my-4">
+<h4 class="font-semibold mb-2">Cost Breakdown</h4>
+<table class="w-full text-sm"><tbody>
+<tr><td class="py-1">Material Cost</td><td class="text-right font-medium">₹${Math.round(matCost).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">Labour Cost</td><td class="text-right font-medium">₹${Math.round(labourCost).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">Machinery</td><td class="text-right font-medium">₹${Math.round(machineryCost).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">Foundation</td><td class="text-right font-medium">₹${Math.round(foundationCost).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">GST (18%)</td><td class="text-right font-medium">₹${Math.round(gst).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">Contingency (3%)</td><td class="text-right font-medium">₹${Math.round(contingency).toLocaleString('en-IN')}</td></tr>
+<tr><td class="py-1">Profit (12%)</td><td class="text-right font-medium">₹${Math.round(profit).toLocaleString('en-IN')}</td></tr>
+<tr class="border-t font-bold text-base"><td class="pt-2">Grand Total</td><td class="text-right pt-2" style="color:var(--accent)">₹${Math.round(grand).toLocaleString('en-IN')}</td></tr>
+</tbody></table>
+<div class="mt-3 flex gap-4 text-sm text-slate-500"><span>₹${Math.round(formData._calc.costSqm).toLocaleString('en-IN')}/m²</span><span>₹${Math.round(formData._calc.costSqft).toLocaleString('en-IN')}/ft²</span></div>`;
+}
+
+function saveFormData(){
+const form=document.getElementById('wizard-form');
+const fd=new FormData(form);
+fd.forEach((v,k)=>{formData[k]=v});
+form.querySelectorAll('input[type=checkbox]').forEach(cb=>{formData[cb.name]=cb.checked});
+}
+
+function nextStep(){
+saveFormData();
+if(currentStep<steps.length-1){currentStep++;renderStep()}
+else{generateQuotation()}
+}
+function prevStep(){saveFormData();if(currentStep>0){currentStep--;renderStep()}}
+
+async function generateQuotation(){
+const qNum='PEB-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+String(Math.floor(Math.random()*9000)+1000);
+const record={
+customer_name:formData.customer_name||'',company_name:formData.company_name||'',mobile:formData.mobile||'',email:formData.email||'',project_location:formData.project_location||'',gst_number:formData.gst_number||'',
+building_length:Number(formData.building_length)||0,building_width:Number(formData.building_width)||0,building_height:Number(formData.building_height)||0,
+total_area:formData._calc.area,num_floors:Number(formData.num_floors)||1,roof_type:formData.roof_type||'Double Slope',steel_grade:formData.steel_grade||'Fe 345',
+wind_speed:Number(formData.wind_speed)||39,seismic_zone:formData.seismic_zone||'Zone III',crane_required:formData.crane_required||'No',
+grand_total:Math.round(formData._calc.grand),cost_per_sqm:Math.round(formData._calc.costSqm),quotation_number:qNum,status:'Generated',created_at:new Date().toISOString()
+};
+document.getElementById('next-btn').disabled=true;document.getElementById('next-btn').textContent='Saving...';
+const res=await window.dataSdk.create(record);
+document.getElementById('next-btn').disabled=false;
+if(!res.isOk){alert('Could not save. Please try again.');return}
+showResult(record);
+}
+
+function showResult(r){
+showView('result');
+document.getElementById('result-content').innerHTML=`
+<div class="card" id="quotation-printable">
+<div class="flex justify-between items-start mb-6">
+<div><h2 class="text-2xl font-bold" style="color:var(--primary)">PEB Quotation Pro</h2><p class="text-sm text-slate-500">Professional Pre-Engineered Building Quotation</p></div>
+<div class="text-right text-sm"><div class="font-bold" style="color:var(--accent)">${r.quotation_number}</div><div>${new Date(r.created_at).toLocaleDateString('en-IN')}</div></div>
+</div>
+<hr class="mb-4">
+<div class="grid md:grid-cols-2 gap-4 text-sm mb-6">
+<div><h4 class="font-semibold mb-1">Customer</h4><p>${r.customer_name}</p><p>${r.company_name||''}</p><p>${r.mobile} | ${r.email}</p><p>${r.project_location}</p>${r.gst_number?`<p>GST: ${r.gst_number}</p>`:''}</div>
+<div><h4 class="font-semibold mb-1">Building</h4><p>${r.building_length}m × ${r.building_width}m × ${r.building_height}m</p><p>Area: ${r.total_area} m² | Floors: ${r.num_floors}</p><p>Roof: ${r.roof_type} | Steel: ${r.steel_grade}</p><p>Seismic: ${r.seismic_zone} | Wind: ${r.wind_speed} m/s</p></div>
+</div>
+<div class="bg-slate-50 rounded-lg p-4 mb-4">
+<h4 class="font-semibold mb-2">Cost Summary</h4>
+<div class="flex justify-between text-lg font-bold"><span>Grand Total</span><span style="color:var(--accent)">₹${r.grand_total.toLocaleString('en-IN')}</span></div>
+<p class="text-sm text-slate-500 mt-1">₹${r.cost_per_sqm.toLocaleString('en-IN')}/m²</p>
+</div>
+<div class="text-xs text-slate-400 mt-6"><p>Terms: 50% advance, balance before dispatch. Quotation valid for 15 days. GST extra as applicable.</p></div>
+</div>
+<div class="flex gap-3 mt-4 no-print">
+<button class="btn-primary" onclick="window.print()">Print / Download PDF</button>
+<button class="btn-secondary" onclick="showView('landing')">New Quotation</button>
+</div>`;
+}
+
+// History
+function renderHistory(){
+const list=document.getElementById('history-list');
+const empty=document.getElementById('history-empty');
+if(!quotations.length){list.innerHTML='';empty.style.display='';return}
+empty.style.display='none';
+list.innerHTML=quotations.map(q=>`<div class="card flex justify-between items-center cursor-pointer hover:shadow-md transition" onclick='showResult(${JSON.stringify(q).replace(/'/g,"&#39;")})'>
+<div><span class="font-semibold" style="color:var(--primary)">${q.quotation_number}</span><span class="text-sm text-slate-500 ml-3">${q.customer_name}</span></div>
+<div class="text-right"><div class="font-bold" style="color:var(--accent)">₹${(q.grand_total||0).toLocaleString('en-IN')}</div><div class="text-xs text-slate-400">${new Date(q.created_at).toLocaleDateString('en-IN')}</div></div>
+</div>`).join('');
+}
+
+// Data SDK
+const dataHandler={onDataChanged(data){quotations=data.sort((a,b)=>b.created_at.localeCompare(a.created_at));renderHistory()}};
+(async()=>{const r=await window.dataSdk.init(dataHandler);if(!r.isOk)console.error('SDK init failed')})();
+
+lucide.createIcons();
+</script>
+ </body>
+</html>
